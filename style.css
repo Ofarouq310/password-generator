@@ -1,3 +1,4 @@
+/* Generic Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,18 +9,20 @@ body {
   background-color: #1f2937;
 }
 
+hr {
+  border: 1px solid #2f3e53;
+  margin-block: 30px;
+}
+
+/* Application styles */
 .app-container {
   background-color: #1f2937;
   width: 100%;
   height: 100vh;
-  padding: 52px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-}
-
-.instructions--container {
-  padding-top: 115px;
+  justify-content: center;
 }
 
 #main-header {
@@ -32,17 +35,123 @@ body {
   margin-bottom: 10px;
 }
 
+#green-header {
+  color: #4adf86;
+}
+
 #green-span {
   color: #4adf86;
 }
 
 #description {
   color: #d5d4d8;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.form--header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Karla", sans-serif;
+  position: relative;
+}
+
+.fa-circle-question {
+  color: #4adf86;
+}
+
+.fa-circle-question:hover {
+  cursor: help;
+}
+
+.info-box {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  left: 33%;
+  bottom: 100%;
+  width: 235px;
+  height: auto;
+  background-color: #273549;
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  line-height: 1.1rem;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.info-box > div {
+  display: flex;
+  gap: 6px;
+}
+
+.active {
+  display: flex;
+}
+
+.form--container {
+  margin-left: 10px;
+}
+
+input[type='number'] {
+  background: #2b3b50;
+  color: #55f991;
+  margin-left: 2px;
+  border: none;
+  border-radius: 6px;
+  padding-block: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.warning-box {
+  display: none;
+  gap: 6px;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 255px;
+  height: auto;
+  background-color: #273549;
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  line-height: 1.1rem;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+  animation: warning 0.5s ease-in-out;
+}
+
+input[type='checkbox'] {
+  margin-right: 5px;
+}
+
+input[type='checkbox']:checked {
+  /* stylelint-disable-next-line */
+  accent-color: #4adf86;
 }
 
 #app-btn {
@@ -56,9 +165,9 @@ body {
   line-height: 24px;
 }
 
-hr {
-  border: 1px solid #2f3e53;
-  margin-block: 30px;
+#app-btn:hover {
+  background: #0d9a6e;
+  cursor: pointer;
 }
 
 .passwords--container {
@@ -66,11 +175,23 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 30px;
 }
 
-.passwords {
+.password-holder {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.password {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #273549;
   color: #55f991;
   border: none;
@@ -82,9 +203,40 @@ hr {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+.password:hover {
+  background-color: #2f3e53;
+  cursor: pointer;
+}
+
+#copy-icon {
+  display: block;
+  color: #4adf86;
+}
+
+#copy-icon2 {
+  display: block;
+  color: #4adf86;
+}
+
+#check-icon {
+  display: none;
+  color: #4adf86;
+}
+
+#check-icon2 {
+  display: none;
+  color: #4adf86;
+}
+
+@media screen and (max-width: 360px) {
+  .info-box {
+    left: 0;
+    bottom: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .app-container {
-    justify-content: center;
     padding: 100px;
   }
 
@@ -100,7 +252,20 @@ hr {
   #description {
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  .info-box {
+    left: 70%;
+    bottom: 70%;
+    width: 345px;
+    font-size: 1rem;
+  }
+
+  .warning-box {
+    width: 400px;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
   }
 
   #app-btn {
@@ -115,11 +280,29 @@ hr {
 
   .passwords--container {
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
   }
 
   .passwords {
     font-size: 14px;
     line-height: 40px;
+  }
+}
+
+/* Keyframes */
+@keyframes warning {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -23,7 +23,7 @@ const password2 = document.getElementById('password2');
 const copyIcon = document.getElementById('copy-icon');
 const checkIcon = document.getElementById('check-icon');
 const copyIcon2 = document.getElementById('copy-icon2');
-const checkIcon2 = document.getElementById('check-icon2');
+const checkIcon2 = document.getElementById('check-icon2'); 
 
 // Animate the green header part using Baffle.js
 const text = baffle('#green-header');

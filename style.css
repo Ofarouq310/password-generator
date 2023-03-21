@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f2937;
+}
+
+.app-container {
+  background-color: #1f2937;
+  width: 100%;
+  height: 100vh;
+  padding: 52px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.instructions--container {
+  padding-top: 115px;
+}
+
+#main-header {
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+  margin-bottom: 10px;
+}
+
+#green-span {
+  color: #4adf86;
+}
+
+#description {
+  color: #d5d4d8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+#app-btn {
+  border: none;
+  color: #fff;
+  background: #10b981;
+  padding: 9px 17px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+hr {
+  border: 1px solid #2f3e53;
+  margin-block: 30px;
+}
+
+.passwords--container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.passwords {
+  width: 100%;
+  background: #273549;
+  color: #55f991;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    justify-content: center;
+    padding: 100px;
+  }
+
+  .instructions--container {
+    padding-top: 0;
+  }
+
+  #main-header {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  #description {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+
+  #app-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  hr {
+    margin-block: 40px;
+  }
+
+  .passwords--container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .passwords {
+    font-size: 14px;
+    line-height: 40px;
+  }
+}

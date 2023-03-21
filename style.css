@@ -14,8 +14,8 @@ body {
   height: 100vh;
   padding: 52px;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
+  flex-direction: column;
 }
 
 .instructions--container {

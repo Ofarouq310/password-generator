@@ -29,7 +29,7 @@ const checkIcon2 = document.getElementById('check-icon2');
 const text = baffle('#green-header');
 text.set({
   characters: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz~!@#$%^&*()-+=[]{}|;:,./<>?',
-  speed: 100,
+  speed: 110,
 });
 text.start();
 text.reveal(2000);

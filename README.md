@@ -22,7 +22,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 Password generator <a name="about-project"></a>
 
 - "The password generator" is an application that allows the user to generate two random passwords, with the ability to choose the length of the password and its characters' preferences.
 

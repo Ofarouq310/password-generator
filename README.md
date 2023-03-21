@@ -52,7 +52,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- 
+- https://ofq310-password-generator.netlify.app/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
